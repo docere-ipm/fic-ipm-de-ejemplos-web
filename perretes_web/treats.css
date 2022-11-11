@@ -1,4 +1,6 @@
 :root {
+    --background: #fff;
+    --color: rgb(64 64 64);
     --fonts: ReithSans, Arial, Helvetica, freesans, sans-serif;
     /* Group B */
     --font-size: 16px;   
@@ -18,8 +20,8 @@ body {
     font-family: var(--fonts);
     font-size: var(--font-size);
     line-height: var(--line-height);
-    background: #fff;
-    color: rgb(64 64 64);
+    background: var(--background);
+    color: var(--color);;
     margin: 0;
     padding: 0;
     border: 0;
@@ -39,11 +41,41 @@ main {
 }
 
 main article {
+    margin-top: var(--5SU);
+}
+
+main article h2.loading:after {
+    content: '⏱';
+    padding-left: var(--2SU);
 }
 
 main article img {
     width: 100%;
 }
+
+main article p.feedback {
+    display: none;
+    text-align: center;
+}
+
+main article p.feedback.loading {
+    display: block;
+    color: var(--color);
+}
+
+main article p.feedback.error {
+    display: block;
+    color: red;
+}
+
+main article p.feedback.error:before {
+    content: '⚠';
+    color: red;
+    padding-right: var(--2SU);
+}
+
+
+
 
 main > button {
     display: block;
