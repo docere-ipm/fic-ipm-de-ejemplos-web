@@ -1,5 +1,6 @@
 :root {
     --background: #fff;
+    --background-secondary: #eee;
     --color: rgb(64 64 64);
     --fonts: ReithSans, Arial, Helvetica, freesans, sans-serif;
     /* Group B */
@@ -15,6 +16,17 @@
     --7SU: 32px;
     --header-height: 56px;
 }
+
+@media (min-width: 600px) {
+    :root {
+	/* Group D */
+	--font-size: 16px;   
+	--line-height: 22px;
+	--trafalgar-font-size: 32px;
+	--trafalgar-line-height: 36px;
+    }
+}
+
 
 body {
     font-family: var(--fonts);
@@ -32,12 +44,46 @@ body > header {
     font-size: var(--trafalgar-font-size);
     line-height: var(--trafalgar-line-height);
     min-height: var(--header-height);
-    background: #eeeeee;
+    background: var(--background-secondary);
     border-bottom: 1px solid #dcdcdc;
+}
+
+@media (min-width: 600px) {
+    body > header {
+	height: min(392px, 16vh);
+	background: var(--background-secondary) no-repeat right top / auto 100% url('i/avatar-snoopy.png');
+    }
 }
 
 main {
     margin: var(--7SU) var(--4SU);
+}
+
+@media (min-width: 600px) {
+    main {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	column-gap: 16px;
+	row-gap: 16px;
+    }
+
+    main form {
+	margin-top: var(--5SU);
+    }
+
+    main article {
+	grid-column: 2;
+	grid-row: 1 / span 3;
+    }
+
+    main article img {
+	height: 50vh;
+	object-fit: contain;
+    }
+    
+    main button {
+
+    }
 }
 
 main article {
