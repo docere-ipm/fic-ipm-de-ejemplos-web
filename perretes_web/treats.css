@@ -1,0 +1,57 @@
+body {
+    font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+    font-size: 16px;   /* Group B */
+    line-height: 22px; /* Group B */
+    background: #fff;
+    color: rgb(64 64 64);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body > header {
+    padding: 33px 16px 16px 16px; /* Group 2 */
+    font-size: 24px;    /* Group B. Si lo cambio en el body, lo tengo que cambiar aquí */
+    line-height: 28px;  /* " */
+    min-height: 56px; /* Group 2 */
+    background: #eeeeee;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+main {
+    margin: 33px 16px; /* Group 2 */
+}
+
+main article {
+}
+
+main article img {
+    width: 100%;
+}
+
+main > button {
+    display: block;
+    margin: 22px auto;
+    padding: 12px; /* 3SU */
+}
+
+main > button svg {
+    height: 22px; /* Lo mismo que line-height */
+    vertical-align: top;
+    padding-right: 8px; /* 2SU */
+}
+
+body > footer {
+    font-size: .6rem;
+    line-height: .44rem; /* .6 * 16/22 */
+    font-style: italic;
+}
+
+body > footer a {
+    color: #1c7bbd;
+    text-decoration-color: #1c7bbd;
+}
+
+body > footer {
+    margin: 16px; /* 4SU */
+}
