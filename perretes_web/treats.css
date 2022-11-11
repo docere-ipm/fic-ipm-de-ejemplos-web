@@ -1,7 +1,23 @@
+:root {
+    --fonts: ReithSans, Arial, Helvetica, freesans, sans-serif;
+    /* Group B */
+    --font-size: 16px;   
+    --line-height: 22px;
+    --trafalgar-font-size: 24px;
+    --trafalgar-line-height: 28px;
+    /* Group 2 */
+    --2SU: 8px;
+    --3SU: 12px;
+    --4SU: 16px;
+    --5SU: 20px;
+    --7SU: 32px;
+    --header-height: 56px;
+}
+
 body {
-    font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
-    font-size: 16px;   /* Group B */
-    line-height: 22px; /* Group B */
+    font-family: var(--fonts);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
     background: #fff;
     color: rgb(64 64 64);
     margin: 0;
@@ -10,16 +26,16 @@ body {
 }
 
 body > header {
-    padding: 33px 16px 16px 16px; /* Group 2 */
-    font-size: 24px;    /* Group B. Si lo cambio en el body, lo tengo que cambiar aquí */
-    line-height: 28px;  /* " */
-    min-height: 56px; /* Group 2 */
+    padding: var(--7SU) var(--4SU) var(--4SU);
+    font-size: var(--trafalgar-font-size);
+    line-height: var(--trafalgar-line-height);
+    min-height: var(--header-height);
     background: #eeeeee;
     border-bottom: 1px solid #dcdcdc;
 }
 
 main {
-    margin: 33px 16px; /* Group 2 */
+    margin: var(--7SU) var(--4SU);
 }
 
 main article {
@@ -31,14 +47,14 @@ main article img {
 
 main > button {
     display: block;
-    margin: 22px auto;
-    padding: 12px; /* 3SU */
+    margin: var(--5SU) auto;
+    padding: var(--3SU);
 }
 
 main > button svg {
-    height: 22px; /* Lo mismo que line-height */
+    height: var(--line-height);
     vertical-align: top;
-    padding-right: 8px; /* 2SU */
+    padding-right: var(--2SU);
 }
 
 body > footer {
@@ -53,5 +69,5 @@ body > footer a {
 }
 
 body > footer {
-    margin: 16px; /* 4SU */
+    margin: var(--4SU);
 }
